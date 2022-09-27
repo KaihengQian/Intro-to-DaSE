@@ -1,0 +1,55 @@
+import math
+
+
+def calculate_pi_1():
+    n = 0
+    temp = (-1) ** n / (2 * n + 1)
+    # 测试使用diff = 0.00000001
+    diff = 0.0000000001
+    temp_ans = 0.0
+    step = 0
+    while abs(temp) > diff:
+        temp_ans += temp
+        n += 1
+        temp = (-1) ** n / (2 * n + 1)
+        step += 1
+    ans = 4 * temp_ans
+    print("%d;%.10f" % (step, ans))
+
+
+def calculate_pi_2():
+    n = 1
+    temp = 1 / n ** 2
+    # 测试使用diff = 0.00000001
+    diff = 0.0000000001
+    temp_ans = 0.0
+    step = 0
+    while abs(temp) > diff:
+        temp_ans += temp
+        n += 1
+        temp = 1 / n ** 2
+        step += 1
+    ans = math.sqrt(6 * temp_ans)
+    print("%d;%.10f" % (step, ans))
+
+
+def calculate_pi_3():
+    n = 0
+    temp = 1 / (2 * n + 1) ** 2
+    # 测试使用diff = 0.00000001
+    diff = 0.0000000001
+    temp_ans = 0.0
+    step = 0
+    while abs(temp) > diff:
+        temp_ans += temp
+        n += 1
+        temp = 1 / (2 * n + 1) ** 2
+        step += 1
+    ans = math.sqrt(8 * temp_ans)
+    print("%d;%.10f" % (step, ans))
+
+calculate_pi_1()
+calculate_pi_2()
+calculate_pi_3()
+# 运行效率：第三种方法最优，第一种方法最差
+
