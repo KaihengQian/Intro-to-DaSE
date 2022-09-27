@@ -1,0 +1,39 @@
+def Square_root_1():
+    c = 2
+    g = 0
+    diff = 0.0001
+    h = 0.00001
+    for i in range(0, c):
+        if i ** 2 < c < (i + 1) ** 2:
+            g = i
+            break
+    while abs(g ** 2 - c) > diff:
+        g += h
+    print("%.5f" % g)
+
+
+#二分法
+def Square_root_2():
+    c = 2
+    diff = 0.00000000001
+    m_max = c
+    m_min = 0
+    g = (m_min + m_max) / 2
+    while abs(g ** 2 - c) > diff:
+        if g ** 2 < c:
+            m_min = g
+        else:
+            m_max = g
+        g = (m_min + m_max) / 2
+    print(g)
+
+
+#牛顿法
+def Square_root_3():
+    c = 2
+    g = c / 2
+    diff = 0.00000000001
+    while abs(g ** 2 - c) > diff:
+        g = (g + c / g) / 2
+    print(g)
+
