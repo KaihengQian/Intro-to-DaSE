@@ -1,0 +1,23 @@
+#for循环
+def reverse_list_1():
+    l = [1, 2, 3, 4, 5]
+    for i in range(len(l) - 1, -1, -1):
+        print(l[i], end=" ")
+    print()
+
+
+#while循环
+def reverse_list_1():
+    l = [1, 2, 3, 4, 5]
+    x = len(l) - 1
+    while x >= 0:
+        print(l[x], end=" ")
+        x -= 1
+    print()
+
+
+#数组切片
+def reverse_list_1():
+    l = [1, 2, 3, 4, 5]
+    print(l[::-1])
+
